@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/itemCountryImageImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_android_black_24dp"
+        android:contentDescription="@string/country_image" />
+
+    <TextView
+        android:id="@+id/itemCountryNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/country_name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/itemRegionNameTextView"
+        app:layout_constraintStart_toEndOf="@+id/itemCountryImageImageView"
+        app:layout_constraintTop_toTopOf="@+id/itemCountryImageImageView"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/itemRegionNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/region_name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemCountryImageImageView"
+        app:layout_constraintStart_toStartOf="@+id/itemCountryNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/itemCountryNameTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
